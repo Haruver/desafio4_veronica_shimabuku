@@ -94,7 +94,7 @@
 .imagenes_servicio, .imagenes_nosotros, .img_nos{  
     display: flex; 
     justify-content: space-around;
-    margin: 4px 6px 4px 6px;
+    margin: 4px 1px 4px 1px;
 }
 
 .imagen_dog_servicio{
@@ -149,7 +149,7 @@ box-shadow: 0px 0px 100px -20px rgba(238,110,250,1);
     padding-left: 35px;
 }
 
-/* ----- ARTICULOS SERVICIOS ----- */
+ 
 .articulos_serv{
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
@@ -197,7 +197,19 @@ box-shadow: 0px 0px 100px -20px rgba(238,110,250,1);
 .dog_18{
     grid-area: dog_18;
 }
-/* ----- FIN ARTICULOS SERVICIOS ----- */
+
+
+/* agregando radiantes-animaciones-transformaciones */
+
+.intro, .articulos{
+    background: rgb(248,228,240);
+    background: linear-gradient(0deg, rgba(248,228,240,1) 0%, rgba(231,251,190,1) 100%);
+}
+.articulos_serv{
+    background: rgb(231,251,190);
+background: radial-gradient(circle, rgba(231,251,190,1) 23%, rgba(248,228,240,1) 65%);
+}
+
 
 
 /* ---------- responsive mobile ----------- */

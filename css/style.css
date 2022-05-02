@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.html{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    color: black;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.inicio {
+    margin: 4px;
+    padding: 4px;
+    background-color: rgb(248, 228, 240);
+    border: solid 1px black;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo{
+    font-family:  'Luckiest Guy', cursive;
+    font-style: normal;
+    position: relative;
+    margin-top: 40px;
+    z-index: 2;
+    font-size: 85px;
+}
+
+.link{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;    
+    font-size: 30px;
+    font-style: normal;
+    margin-top: 2px;
+    padding: 10px;
+}
+
+.section_index{
+    margin: 4px;
+    padding: 4px;
+    border: solid 2px #E7FBBE; 
+    background-image: url("../images/dog_12.jpg");
+    background-position:repeat;
+    background-size: 450px;
+}
+
+.subtitulo{
+    font-size: 50px;
+    text-align:center;
+    background-color: #E7FBBE;
+}
+
+.intro{
+    list-style-type: none;
+    font-size: 30px;
+    text-align: center;
+    background-color: #E7FBBE;
+}
+
+.imagen_index{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.dog_inicio{
+    border: solid 3px;
+    border-color:white;
+    border-style: double;
+}
+
+
+.section_servicio, .section_galeria, .section_nosotros, .section_contacto{
+    margin: 4px;
+    padding: 4px;
+    border: solid 2px #E7FBBE; 
+}
+
+.articulos, .articulos_serv{
+      background-color: #E7FBBE;
+      list-style-type: none;
+      padding: 15px;
+      font-size: 25px
+}
+
+.imagenes_servicio, .imagenes_nosotros, .img_nos{  
+    display: flex; 
+    justify-content: space-around;
+    margin: 4px 6px 4px 6px;
+}
+
+.imagen_dog_servicio{
+    padding: 5px;
+    width: 20%;
+}
+
+.imagenes_galeria{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 15px;
+    padding: 20px;
+}
+
+.dogs_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-box-shadow: 0px 0px 100px -20px rgba(238,110,250,1);
+-moz-box-shadow: 0px 0px 100px -20px rgba(238,110,250,1);
+box-shadow: 0px 0px 100px -20px rgba(238,110,250,1);
+}
+
+.dog_video{
+     width: 100%;
+     height: 100%;
+}
+
+.imagen_items_video{
+    grid-column: 2 / 4;
+}
+
+.footer{
+    margin: 4px;
+    padding: 4px;
+    background-color: violet;
+    text-align: center;
+    color: whitesmoke;
+    border: solid 1px black;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.contacto{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.contacto_redes{
+    padding-left: 35px;
+}
+
+/* ----- ARTICULOS SERVICIOS ----- */
+.articulos_serv{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 5px 10px; 
+    grid-template-areas: 
+      "guarderia dog_14 dog_14"
+      "dog_15 paseos paseos"
+      "pet_shop dog_16 dog_16"
+      "dog_17 veterinaria veterinaria"
+      "adiestramiento dog_18 dog_18"; 
+}
+.dog_14 {
+    grid-area: dog_14;
+}
+.guarderia{
+    grid-area: guarderia;
+    margin: 12%;
+}
+.dog_15{
+    grid-area: dog_15;
+}
+.paseos{
+    grid-area: paseos;
+    margin: 12%;
+}
+.pet_shop{
+    grid-area: pet_shop;
+    margin: 12%;
+}
+.dog_16{
+    grid-area: dog_16;
+}
+.veterinaria{
+    grid-area: veterinaria;
+    margin: 12%;    
+}
+.dog_17{
+    grid-area: dog_17;
+}
+.adiestramiento{
+    grid-area: adiestramiento;
+    margin: 12%;
+}
+.dog_18{
+    grid-area: dog_18;
+}
+/* ----- FIN ARTICULOS SERVICIOS ----- */
+
+
+/* ---------- responsive mobile ----------- */
+
+@media only screen and
+  (max-width: 450px){
+
+    .html{
+        margin: 1px;
+        padding: 1px;
+    }
+    .titulo{
+        font-size: 48px;
+    }
+    .link, .intro{
+        font-size: 20px;
+    }
+    .subtitulo{
+        font-size: 40px;
+    }
+    .articulos{
+        font-size: 15px;
+    }
+    .dog_inicio{
+        width: 350px;
+    }
+    .footer{
+        font-size: 10px;
+        margin: 2px;
+        padding: 2px;
+    }
+
+    .contacto{
+        display: none;
+        position: fixed;
+        display: grid;
+        align-content: space-between;
+        grid-row-gap: 5px;
+    }
+    .contacto_text{
+        display: none;
+    }
+
+    .imagenes_servicio {
+        margin: 3px 3px 2px 3px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+    .imagen_dog_servicio{
+        width: 120px;
+    }
+
+    .imagenes_galeria{
+        grid-template-columns: repeat(3, 1fr) ;
+    }
+    .imagen_items_video{
+        grid-column: 1 / 4; 
+    }   
+    .imagen_dog_6{
+        grid-column: 1/4;
+    }
+    .img_nos{
+        width: 100%;
+    }
+    
+    .imagenes_nosotros{
+        display: inline-grid;
+        grid-gap: 10px;
+        justify-items: center;
+    }
+    
+    .contacto_redes{
+        padding-inline: 38%;
+    }
+
+    #paseos{
+        background-color: #9ae700;
+    }
+    .at_vet{
+        background-color: green;
+        font-size: 1.6rem;
+    }
+
+}
